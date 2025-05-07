@@ -1,0 +1,91 @@
+{{ define "planner/modals" }}
+<!-- Add Todo Modal -->
+<div class="modal fade" id="addTodoModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add New Todo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="todoTitle" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="todoTitle" required>
+                </div>
+                <div class="mb-3">
+                    <label for="todoDescription" class="form-label">Description</label>
+                    <textarea class="form-control" id="todoDescription" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="todoDueDate" class="form-label">Due Date</label>
+                    <input type="date" class="form-control" id="todoDueDate">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="addTodo()">Add Todo</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Priority Modal -->
+<div class="modal fade" id="addPriorityModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add New Priority</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="priorityTitle" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="priorityTitle" required>
+                </div>
+                <div class="mb-3">
+                    <label for="priorityDescription" class="form-label">Description</label>
+                    <textarea class="form-control" id="priorityDescription" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="addPriority()">Add Priority</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Contact Modal -->
+<div class="modal fade" id="addContactModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add New Contact Task</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="contactName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="contactName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="contactType" class="form-label">Contact Type</label>
+                    <select class="form-select" id="contactType" required>
+                        <option value="Call">Call</option>
+                        <option value="Email">Email</option>
+                        <option value="Text">Text</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="contactDescription" class="form-label">Description</label>
+                    <textarea class="form-control" id="contactDescription" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="addContact()">Add Contact Task</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }} 
